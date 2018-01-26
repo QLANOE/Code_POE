@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Le nombre magique</title>
+
+	<script >
+		function maFonction(){
+			//alert("hello");
+			var v=document.getElementById("nombre").value;
+			if(i>5){
+				document.getElementById("demo").innerHTML+=(i+1)+") T'es mauvais Jack"+"<br>";
+			}
+			else{
+			if(jet>v){
+				document.getElementById("demo").innerHTML+=(i+1)+") plus grand"+"<br>";
+		}
+			else if(jet<v){
+				document.getElementById("demo").innerHTML+=(i+1)+") plus petit"+"<br>";
+			}
+			else if(jet==v){
+				document.getElementById("demo").innerHTML+=(i+1)+") c'est gagné"+"<br>";
+			}
+		}
+			i++
+
+		}
+	</script>
+		<script >
+		function rejouer(){
+			//alert("hello");
+			jet=Math.floor(Math.random()*100)+1;
+			//document.getElementById("demo").innerHTML=jet+ "<br>";
+			i=0;
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Devinez le nombre magique</h1>
+
+	<input type="text" id="nombre" value="50">
+	<br><br>
+	<button onclick="maFonction()">OK</button>
+	<button onclick="rejouer()">Rejouer</button>
+
+	<div id="demo"></div>
+
+	<script >
+		var jet=Math.floor(Math.random()*100)+1;
+		//document.getElementById("demo").innerHTML=jet+ "<br>";
+		var i=0;
+	</script>
+</body>
+</html>

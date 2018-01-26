@@ -1,0 +1,330 @@
+/* 
+
+		GLOBAL
+
+*/
+
+*{
+	box-sizing:border-box;
+}
+
+html,body{
+	
+	padding: 0;
+	margin:0;
+	width: 100%;
+	height:100%
+
+}
+
+body{
+	
+	background-color:rgb(255,255,255);
+	background-color:rgb(255,255,255,1);
+	background-color:#F9BB82;
+	/*background: #F9BB82 url(../images/back_patate.jpg) no-repeat center center;*/
+	color #333;
+	font-size: 13px;
+	line-height: 1.5;
+	font-family:"Helvetica Neue",Helvetica,Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing:antialiased;
+	display: flex;
+	
+	/*display:-webkit-flex;*/
+	/*display:-moz-flex;
+	/*display:-ms-flex;*/
+	flex-direction:column;
+	overflow-x:hidden;
+	font-family: 'Itim', cursive;
+}
+
+.list-unstyled{
+	list-style-type:none;
+	padding:0 ;
+
+}
+
+.visual{
+	visibility:hidden;
+}
+
+.visual-container{
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center center;
+	height:350px;
+}
+
+
+
+
+
+/*
+
+		HEADER
+
+
+*/
+#header{
+	background-color: #cc6600;
+	height: 50px;
+	margin:0;
+}
+
+#logo{
+	float:left;
+}
+
+#main-nav{
+	float:right;
+	display:none;
+}
+
+@media(min-width: 992px){
+	
+	#main-nav{
+		display:block;
+	}
+	
+}
+
+.clearfix:after, .clearfix:before{
+	display:table;
+	content:"";
+	clear: both;
+}
+
+.main-nav-item{
+	display: inline-block;
+}
+
+.main-nav-link{
+	color: white;
+	text-decoration:none;
+	display:block;
+	padding:0.5em 1em;
+	font-size:1.1em;
+	font-weight:600;
+}
+
+.main-nav-link:hover, 
+.main-nav-link:focus{
+	color:#333;
+	border-bottom: 1px solid #333;
+}
+
+.container{
+	width:100%;
+	margin:0 auto;
+}
+@media(min-width: 992px){
+	
+	.container{
+		width:960px;
+	}
+}
+
+#btn-toggle-menu{
+	width:48;
+	height:48;
+	background:none;
+	border:none;
+	float:right;
+}
+
+#btn-toggle-menu:hover .bar{
+	background-color:#333;
+}
+
+@media(min-width: 992px){
+	
+	#btn-toggle-menu{
+		display:none;
+	}
+	
+}
+
+.bar{
+	display:block; 
+	height:3px;
+	width:100%;
+	background-color:#fff;
+	margin-bottom:8px;
+}
+
+/*
+
+		MAIN
+		
+*/
+
+
+#page-content{
+	flex: 1;
+}
+#breadscrumb{
+	padding: 16px 0;
+	
+}
+
+.breadscrumb-item{
+	display:inline-block;
+}
+
+.breadscrumb-item:after{
+	
+display:inline-block;
+content:' / ';
+padding: 0 .1em;
+}
+.breadscrumb-item:last-child:after{
+	display:none;
+}
+
+.breadscrumb-link{
+	text-decoration:none;
+}
+
+.breadscrumb-item:last-child .breadscrumb-link{
+	color:#999;
+}
+
+.panel{
+	border: 1px solid #333;
+	display:block;
+	padding: 16px;
+}
+
+.title{
+	font-size:1.6em;
+	
+}
+
+
+.btn{
+	display: inline-block;
+	padding: .5em 1em;
+	border-radius:4px;
+	border-style;solid;
+}
+
+@media(max-width: 991px){
+	.btn{
+		display:block;
+		width:100%;
+		margin-bottom:12px;
+	}
+	
+}
+
+.btn:hover{
+	cursor:pointer;
+}
+
+.btn-info{
+	background-color:#cc6600;
+	color:white;
+	outline:0;
+	box-shadow:none;
+	border-color:#cc6600;
+}
+
+.btn-info:hover{
+	background-color:#3b5998;
+}
+
+.btn-info:focus, .btn-info:active, .btn-info:active:focus{
+
+   background-color: #cc6600;
+
+   border-color: #cc6600;
+
+   }
+#main{
+	
+}
+
+#article-preview{
+	margin:16px 0;
+	
+}
+
+.article-preview-item{
+	float:left;
+	width:50%;
+	padding: 8px;
+}
+
+.article-preview-item:nth-child(odd){
+	padding-left:0;
+}
+
+.article-preview-item:nth-child(even){
+	padding-right:0;
+}
+
+.article-preview-section{
+	width:50%;
+	float:left;
+
+}
+
+.article-preview-link{
+	
+	padding:0;
+	display:block;
+}
+
+.article-preview-content{
+	padding:8px;
+}
+
+.section-perso{
+	border: none;
+	background-color:cc6600;
+	width:100%
+}
+
+.bandeau-perso{
+	padding:0;
+	display:block;
+	color:#fff;
+}
+
+.backcolor{
+	background-color:F9BB82;
+}
+
+#backdrop{
+	background-color:rgba(0,0,0,.7);
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	position:fixed;
+}
+
+#window{
+    position:absolute;
+    width: 600px;
+    min-height: 300px;
+    background-color: #fff;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;;
+}
+
+#backdrop, #window{
+	display:none;
+}
+
+.window-opened #backdrop,
+.window-opened #window{
+	display:block;
+}
+
+
+	
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page 1</title>
+	<script>
+		//javascript ici
+	</script>
+	<!--<script src="="test.js"></script>-->
+</head>
+<body>
+	<div id="demo">Bonjour</div>
+	<script >
+		var a="coucou";
+		//alert(a);
+		console.log(a);
+		//document.write(a); réécrit toute la page html puis fait une insertion
+		var selecteur=document.getElementById("demo");//sélecteur de l'id demo
+		var val=selecteur.innerHTML;//mise en variable de ce qui se trouve dans cette balise
+		selecteur.innerHTML = val +" "+ a;// on concatène
+
+		
+
+
+
+		//javascript ici
+	</script>
+</body>
+</html>

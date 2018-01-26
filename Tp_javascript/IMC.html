@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IMC</title>
+	<script >
+		function maFonction(){
+			//alert("hello");
+			document.getElementById("tableau").innerHTML="Pour votre taille, voici les différents poids que vous devez faire pour atteindre les IMC correspondant"+"<br>"
+			var Poid=document.getElementById("poid").value;
+			//document.getElementById("poid").value="";
+			var Taille=document.getElementById("Taille").value;
+			//document.getElementById("Taille").value="";
+			var selecteur=document.getElementById("demo");//sélecteur de l'id demo
+			//var val=selecteur.innerHTML;//mise en variable de ce qui se trouve dans cette balise
+			var IMC=Math.round((Poid/(Taille*Taille)))
+			selecteur.innerHTML ="Votre IMC est de "+ IMC;// on concatène
+
+			selecteur=document.getElementById("resultat");
+			if (IMC<18) {
+    			selecteur.innerHTML="T'es trop maigre, va au MacDalle";
+    		}else if(IMC<20){
+    					selecteur.innerHTML="Ou la, un petit kouign amann?";
+    		}
+    		else if (IMC<25){
+    					selecteur.innerHTML="T'es bien, une petite raclette?";
+    		}
+    		else if (IMC<30){
+    					selecteur.innerHTML="Tu mange bien à la cantine toi. Va marcher";
+    		}
+    		else{
+    				selecteur.innerHTML="PAI, faut arrêter le fois gras au Nutella, Va à la salle";
+    				}
+
+    		selecteur=document.getElementById("tableau");
+    		//document.getElementById("tableau").innerHTML="bonjour";
+    		var IMC=[18,20,25,30,35];
+    		for (var i = 0; i < IMC.length; i++) {
+    			selecteur.innerHTML+="Pour un IMC de "+IMC[i]+", vous devez pesez "+(IMC[i]*Taille*Taille)+" kg"+" <br>";
+    		}
+    			
+    		}// fct 
+
+	</script>
+
+</head>
+<body>
+	<h1>Votre Poids</h1>
+
+	<input type="text" id="poid" value="50">
+	<br><br>
+
+	<h1>Votre Taille</h1>
+
+	<input type="text" id="Taille" value="1.5">
+	<br><br>
+	<button onclick="maFonction()">OK</button>
+
+	<div id="demo">Votre IMC est de </div>
+	<div id="resultat"></div>
+	<div id="tableau">Pour votre taille, voici les différents poids que vous devez faire pour atteindre les IMC correspondant<br>
+
+	</div>
+
+</body>
+</html>

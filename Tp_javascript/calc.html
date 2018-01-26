@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ma calculette</title>
+		<script >
+		function addition(){
+			//alert("hello");
+			var chiffre1=parseFloat(document.getElementById("chiffre1").value);
+			var	chiffre2=parseFloat(document.getElementById("chiffre2").value);
+			var resultat=chiffre1+chiffre2;
+			document.getElementById("resultat").innerHTML+=resultat+"<br>";
+		}
+		function soustraction(){
+			//alert("hello");
+			var chiffre1=parseFloat(document.getElementById("chiffre1").value);
+			var	chiffre2=parseFloat(document.getElementById("chiffre2").value);
+			var resultat=chiffre1-chiffre2;
+			document.getElementById("resultat").innerHTML+=resultat+"<br>";
+		}
+		function multiplication(){
+			//alert("hello");
+			var chiffre1=parseFloat(document.getElementById("chiffre1").value);
+			var	chiffre2=parseFloat(document.getElementById("chiffre2").value);
+			var resultat=chiffre1*chiffre2;
+			document.getElementById("resultat").innerHTML+=resultat+"<br>";
+		}
+		function division(){
+			//alert("hello");
+			var chiffre1=parseFloat(document.getElementById("chiffre1").value);
+			var	chiffre2=parseFloat(document.getElementById("chiffre2").value);
+			var resultat=chiffre1/chiffre2;
+			document.getElementById("resultat").innerHTML+=resultat+"<br>";
+		}
+	</script>
+</head>
+<body>
+	<h1>Faite votre opérationt</h1>
+
+	<input type="text" id="chiffre1" value="0">
+	<br>
+	<input type="text" id="chiffre2" value="0">
+	<br>
+	<button onclick="addition()">+</button>
+	<button onclick="soustraction()">-</button>
+	<button onclick="multiplication()">x</button>
+	<button onclick="division()">/</button>
+
+	<div id="resultat">Le résulat est de: <br></div>
+
+
+
+</body>
+</html>

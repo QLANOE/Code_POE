@@ -1,0 +1,26 @@
+<div class="container" id="interface">
+	<table>
+		<tr>
+			<td><input type="text" id="rechercher" ng-model="ctrl.recherche"></td>
+			<td><button type="button" ng-click="ctrl.rechercher()">Rechercher</button></td>
+		</tr>
+	</table>
+</div>
+<div class="container">
+	<table id="maTable">
+		<thead>
+			<tr>
+				<th>Titre</th>
+				<th>Année</th>				    
+				<th>Autre</th>				    
+			 </tr>
+		</thead>
+		<tbody id="tableBody" >
+			<tr ng-repeat="film in ctrl.listeFilm">
+				<td>{{film.Title}}</td>
+				<td>{{film.Year}}</td>
+				<td><button ng-click="ctrl.selectionnerFilm($index)"> Afficher détails</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

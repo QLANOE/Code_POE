@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>recherche de prénom</title>
+	
+	<script >
+			var personnes=[{	
+				prenom:"quentin",
+				nom:"LANOE",
+				anneeNaissance:1990},
+			{
+				prenom:"marie",
+				nom:"Alvarez",
+				anneeNaissance:1994},
+			{
+				prenom:"Gilles",
+				nom:"",
+				anneeNaissance:-10000}];
+
+			var prenomRecherche='Gilles';
+			var nomRecherche='';
+			var personneTrouvee;
+
+			for(i=0;i<personnes.length;i++){
+				if(personnes[i].prenom==prenomRecherche && personnes[i].nom==nomRecherche){
+					personneTrouvee=personnes[i];
+					break;
+				}
+			}
+			console.log(personneTrouvee);
+
+			function trouverPersonne(personne){
+				if(personne.prenom==prenomRecherche && personne.nom==nomRecherche){
+					personneTrouvee=personne;
+				}
+			}
+			personnes.forEach(trouverPersonne);
+
+			console.log(personneTrouvee);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

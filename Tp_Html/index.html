@@ -1,0 +1,168 @@
+<!DOCTYPE.html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Présentation </title>
+		
+		<!--on nomme la page pour google(75 premier caractère dutitre et les 150 premier caractère de la description-->
+		<meta name="description" contents="description de la page">
+		<meta name="og:description" content="description pour Facebook"><!-- description pour facebook C-->
+		<meta name="twitter:description" content="Description pour Twitter"><!-- description pour twitter-->
+		<link rel="image_src" href="./images/....png">
+		
+		<meta property="og:image" content="./images/....png">
+		<meta property="twitter:image" content="./images/....png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="./CSS/main.css"> <!-- appel du fichier CSS-->
+		
+		<link rel="canonical" href="index.html"><!-- page de référence pour google(pas de pénalité de référencement)-->
+		
+		<link rel="icon" href="./images/notparse.jpg">
+		<link rel="apple-touch-icon" sizes="57x57" href="./images/notparse_57_57.jpg"><!-- adaptation pour les apprails apple-->
+		<meta name="msapplication_square70x70logo" content="./images/notparse_57_57.jpg">
+		
+	</head>
+	
+
+
+	
+	<body >
+		<header id="header" class="clearfix">
+			<a href="/" title="Ma société est foireuse">
+				<img id "logo" src="./images/patate.png" width="100px" alt=""Logo de ma société">
+			</a>
+					
+			<nav id="main-nav">
+				<ul id="main_nav_list" class="list-unstyled">
+					<!-- class pour li, class pour lien, titre, -->
+					<li class="main-nav-item"><a class="main-nav-link" href="./presentation/index.html" title="voir la page de présentation">Présentation</a></li>
+					<li class="main-nav-item"><a class="main-nav-link" href="#" title="voir la page de A propos">A propos</a></li>
+					<li class="main-nav-item"><a class="main-nav-link" href="#" title="voir la page de Contact">Contact</a></li>
+				</ul>
+			</nav>
+			<button id="btn-toggle-menu">
+				<span class='bar'></span>
+				<span class='bar'></span>
+				<span class='bar'></span>
+			</button>
+		</header>
+			<div id="page-content">
+				<nav id="breadscrumb">
+					<div class="container">
+						<ol class="list-unstyled">
+							<li class="breadscrumb-item">
+								<a class="breadscrumb-link" href="/">Accueil</a>
+							</li>
+							<li class="breadscrumb-item">
+								<a class="breadscrumb-link" href="#">Ma page</a>
+							</li>
+						</ol>
+					</div>
+				</nav>
+				
+				<main id="main">
+					<div class="container">
+						<section class="panel backcolor">
+							<h1 class="title">La Patate, c'est la vie</h1>
+							<p class="description">Vivez patate! La patate est l'aliment le plus sain que vous puissiez manger.</p>
+							<button type="button" class="btn btn-primary btn-lg btn btn-info" data-toggle="modal" data-target="#myModal">
+							Pour plus de Patate
+							</button>
+							<button id ="billy" class="btn btn-primary btn-lg btn btn-info" >Parce que! </button>
+							<!--<button class="btn btn-info" >Pour plus de patate </button>-->
+						</section>
+						<ul id="article-preview" class="list-unstyled clearfix">
+							<li class=" article-preview-item">
+								<a href="#" class="clearfix article-preview-link panel backcolor">
+									<div class="article-preview-section visual-container backcolor" style="background-image: url(images/patate_aphro.jpg)">
+										<img class="visual" src="images/patate_aphro.jpg" alt="la patate, un aphrodisiaque?">
+									</div>
+									<div class="article-preview-section article-preview-content backcolor" >
+										<h2>La patate, un puissant aphrodisiaque?</h2>
+										<p>La patate serait plus aphrodisiaque que le gingembre ou le nutella</p>
+									</div>
+								</a >
+							</li>
+							<li class="article-preview-item">
+								<a href="#" class="clearfix article-preview-link panel backcolor">
+									<div class="article-preview-section visual-container" style="background-image: url(images/patate_ferie.jpg)">
+										<img class="visual" src="images/patate_ferie.jpg" alt="la patate, un jour férié?">
+									</div>
+									<div class="article-preview-section article-preview-content" >
+										<h2>La fête de la patate férié?</h2>
+										<p>La fête de la patate devrait devenir un jour férié compte tenu de l'engouement que créait ce produit.</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<section class="panel section-perso">
+						<div class="container">
+							<a href="#" class="clearfix bandeau-perso">
+								<div class="article-preview-section visual-container" style="background-image: url(images/sauce_blanche.jpg)">
+									<img class="visual" alt="bol de sauce blanche" src="images/sauce_blanche.jpg">
+								</div>
+								<div class="article-preview-section article-preview-content">
+									<h2 class="title text">
+										La sauce blanche, une obligation?
+									</h2>
+									<p class="text">
+									La sauce blanche est elle indispensable à la dégustation de la patate? Le Ketchup est il une hérésie?
+									</p>
+								</div>
+							</a>
+						</div>
+						</section>
+					</div>
+					
+					<!--<div style="border:1px solid #000;width:300px;height:300px;position:relative;">
+						<div style="border:1px solid; background-color:#2b9b61;width:50;height:50;position:absolute;">
+						</div>
+					</div>
+					<div style="position:fixed; width:1px; height:1px; background-color:#000000;left:135px;top:120px">
+					</div>-->
+				</main>
+			</div>
+			
+			
+			<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">J'aime les patates</h4>
+      </div>
+      <div class="modal-body">
+        <img alt="bol de sauce blanche"  width="500"src="images/coeur.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+  	
+</div>
+		<footer>
+			<div class="container" >&copy 2017 Ma société | Tous droits réservés
+		</footer>
+		
+		
+		<div id="backdrop"></div>
+		<div id="window"></div>
+		
+		
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+    </script>
+
+<script src="./javascript/main.js"></script>
+	</body>
+</html>
+

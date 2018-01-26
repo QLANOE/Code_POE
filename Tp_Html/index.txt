@@ -1,0 +1,54 @@
+<!DOCTYPE.html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title> Présentation </title>
+		
+		<!--on nomme la page pour google(75 premier caractère dutitre et les 150 premier caractère de la description-->
+		<meta name="description" contents="description de la page">
+		<meta name="og:description" content="description pour Facebook"><!-- description pour facebook C-->
+		<meta name="twitter:description" content="Description pour Twitter"><!-- description pour twitter-->
+		<link rel="image_src" href="./images/....png">
+		
+		<meta property="og:image" content="./images/....png">
+		<meta property="twitter:image" content="./images/....png">
+		<link rel="stylesheet" href="./CSS/main.css"> <!-- appel du fichier CSS-->
+		
+		<link rel="canonical" href="index.html"><!-- page de référence pour google(pas de pénalité de référencement)-->
+		
+		<link rel="icon" href="./images/notparse.jpg">
+		<link rel="apple-touch-icon" sizes="57x57" href="./images/notparse_57_57.jpg"><!-- adaptation pour les apprails apple-->
+		<meta name="msapplication_square70x70logo" content="./images/notparse_57_57.jpg">
+		
+	</head>
+	
+
+
+	
+	<body>
+		<header id="header" class="clearfix">
+			<a href="/" title="Ma société est foireuse">
+				<img id "logo" src="./images/patate.png" width="100px" alt=""Logo de ma société">
+			</a>
+					
+			<nav id="main-nav">
+				<ul id="main_nav_list" class="list-unstyled">
+					<!-- class pour li, class pour lien, titre, -->
+					<li class="main-nav-item"><a class="main-nav-link" href="./presentation/index.html" title="voir la page de présentation">Présentation</a></li>
+					<li class="main-nav-item"><a class="main-nav-link" href="#" title="voir la page de A propos">	A propos</a></li>
+					<li class="main-nav-item"><a class="main-nav-link" href="#" title="voir la page de Contact">Contact</a></li>
+				</ul>
+			</nav>
+	
+		</header>
+			<div id="page-content">
+		
+	
+			</div>
+		<footer>
+
+		</footer>
+	
+	</body>
+</html>

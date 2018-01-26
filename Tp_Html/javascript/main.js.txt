@@ -1,0 +1,10 @@
+$(function(){
+	alert("Hey Billy");
+	$('.batard').on('click', function(){
+		$('body').addclass('window_opened');
+	}
+	
+	$('#backdrop').on('click', function(){
+		$('body').removeclass('window_opened');
+	}
+});

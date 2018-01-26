@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tableau affichage données</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>form > input{width: auto !important;} .deleteBtn{color: red;cursor: pointer;}</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+</head>
+<body>
+	<form class="container" id="interface">
+		<input type="text" id="prenomInput" placeholder="prenom">
+		<input type="text" id="nomInput" placeholder="nom">
+		<input type="number" id="ageInput" placeholder="age">
+		<button type="button" onclick="ajouterPersonne()">Ajouter personne</button>
+		<button type="button" onclick="modifierTableau()">Modifier la saisie</button>
+	</form>
+
+	<div class="container">
+		<table id="maTable">
+			<thead>
+				<tr>
+				    <th/>
+					<th>Prenom
+						<button type="button" class="btn btn-default btn-sm" onclick="triage(Prenom)">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>
+				    <th>Nom
+						<button type="button" class="btn btn-default btn-sm" onclick="triageAlphabetiqueNom()">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>				    
+				    <th>Age
+						<button type="button" class="btn btn-default btn-sm" onclick="triageAge()">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>				    
+					<th/>
+			  </tr>
+			</thead>
+			<tbody id="tableBody">
+				<tr>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<h4 id="selectionTitle"><strong>Votre selection:</strong></h4>
+		<ul id="selectionList">
+
+		</ul>
+	</div>
+<script src="script-donnees.js"></script>
+</body>
+</html>

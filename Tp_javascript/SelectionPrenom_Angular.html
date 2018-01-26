@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+<head>
+	<meta charset="utf-8">
+	<title>Tableau affichage données</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ 	<style>form > input{width: auto !important;} .deleteBtn{color: red;cursor: pointer;}</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+</head>
+<body ng-controller="NameController as ctrl">
+	<form class="container" id="interface">
+		<input type="text" id="prenomInput" placeholder="prenom" ng-model="ctrl.prenom">
+		<input type="text" id="nomInput" placeholder="nom" ng-model="ctrl.nom">
+		<input type="number" id="ageInput" placeholder="age" ng-model="ctrl.age">
+		<button type="button" ng-click="ctrl.ajouterPersonne()">Ajouter personne</button>
+		<button type="button" ng-click="ctrl.editMode = !ctrl.editMode">{{ctrl.editMode?"Sauvegarder saisie":'Modifier la saisie'}}</button>
+	</form>
+
+	<div class="container">
+		<table id="maTable">
+			<thead>
+				<tr>
+				    <th/>
+					<th>Prenom
+						<button type="button" class="btn btn-default btn-sm" onclick="triageAlphabetiquePrenom()">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>
+				    <th>Nom
+						<button type="button" class="btn btn-default btn-sm" onclick="triageAlphabetiqueNom()">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>				    
+				    <th>Age
+						<button type="button" class="btn btn-default btn-sm" onclick="triageAge()">
+          					<span class="glyphicon glyphicon-chevron-down"></span>
+        				</button>
+        			</th>				    
+					<th/>
+			  </tr>
+			</thead>
+			<tbody id="tableBody" >
+				<tr ng-repeat="personne in ctrl.listePersonnes">
+					<td><input id="checkBox'" type="checkbox"  ng-model="personne.isSelected" ></td>
+			  		<td> 
+			  			<input ng-readonly="!ctrl.editMode" type="text"  ng-model="personne.prenom"/>
+			  		 </td>
+			  		<td> <input type="text" ng-readonly="!ctrl.editMode"  ng-model="personne.nom" />
+			  		</td>
+			  		<td> <input type="number" ng-readonly="!ctrl.editMode"  ng-model="personne.age" />
+			  		</td>
+			  		<td><a class="deleteBtn" ng-click="ctrl.detruirePersonne($index)">&#10006;</a></td></tr>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<h4 id="selectionTitle"><strong>Votre selection:</strong></h4>
+		<ul id="selectionList">
+			<li id="selectionList" ng-repeat="personne in ctrl.listePersonnes | filter:{isSelected:true}"> {{personne.prenom}} {{personne.nom}} {{personne.age}}</li>
+		</ul>
+	</div>
+<script src="selection_prenom_angular.js"></script>
+</body>
+</html>
