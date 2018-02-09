@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.DaoService;
+import dao.UtilisateurService;
 import utilisateurs.Utilisateur;
 
 public class InscriptionServlet extends HttpServlet {
@@ -34,14 +34,14 @@ public class InscriptionServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		Date date = new Date();
 
-		Utilisateur utilisateur = DaoService.chercherUtilisateur(login);
+		Utilisateur utilisateur = UtilisateurService.chercherUtilisateur(login);
 		if (utilisateur == null) {
 			Utilisateur user = new Utilisateur();
 			user.setDateInscription(date);
 			user.setMail(email);
 			user.setName(login);
 			user.setPassword(pwd);
-			DaoService.ajouterUtilisateur(user);
+			UtilisateurService.ajouterUtilisateur(user);
 			session.setAttribute("connection", "true");
 			session.setAttribute("name", login);
 			response.sendRedirect("home");

@@ -25,7 +25,7 @@
 				<table cellspacing="1" width="100%">
 					<tbody>
 						<tr>
-							<td valign="middle" align="left" colspan="4" nowrap="nowrap"><a href="#"><img src="fichiers/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="#"><img src="fichiers/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
+							<td valign="middle" align="left" colspan="4" nowrap="nowrap"><a href="#"><img src="fichiers/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="post"><img src="fichiers/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
 							</td>
 						</tr>
 					</tbody>

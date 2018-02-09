@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.DaoService;
+import dao.UtilisateurService;
 import utilisateurs.Utilisateur;
 
 public class LoginServlet extends HttpServlet {
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String login = request.getParameter("username");
 		String pwd = request.getParameter("password");
 
-		Utilisateur user = DaoService.chercherUtilisateur(login, pwd);
+		Utilisateur user = UtilisateurService.chercherUtilisateur(login, pwd);
 		if (user == null && !(login.equals("guillaume") && pwd.equals("poidevin"))
 				&& !(login.equals("got") && pwd.equals("it"))) {
 			session.removeAttribute("name");
