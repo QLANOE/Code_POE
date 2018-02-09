@@ -1,0 +1,18 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<table class="tablebg" style="margin-top: 5px;"	cellspacing="1" cellpadding="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="row1">
+				<p class="breadcrumbs">
+					<c:choose>
+						<c:when test="<%= session.getAttribute(\"connection\") != null %>">Bienvenue <%= session.getAttribute("name") %> <a href="logout" class="btnmain">Se déconnecter</a></c:when>
+						<c:when test="<%= session.getAttribute(\"connection\") == null %>">Utilisateur non identifie <a href="login" class="btnmain">Se connecter</a><a href="inscription" class="btnmain">S'inscrire</a></c:when>
+						<c:otherwise>forum</c:otherwise>
+					</c:choose>
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
